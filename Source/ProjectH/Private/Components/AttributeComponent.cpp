@@ -147,7 +147,7 @@ static void TickAuraList(TArray<UAura_Base*>& AuraList, float DeltaTime, AActor*
         {
             AuraList[Index]->Server_OnAuraTicked(DeltaTime);
         }
-        if (Owner->GetInstigatorController()->IsLocalPlayerController())
+        if (Owner->GetInstigatorController() && Owner->GetInstigatorController()->IsLocalPlayerController())
         {
 			AuraList[Index]->Client_OnAuraTicked(DeltaTime);
         }
