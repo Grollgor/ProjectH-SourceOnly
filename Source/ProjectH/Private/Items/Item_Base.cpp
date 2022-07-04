@@ -111,6 +111,7 @@ void AItem_Base::Server_SetCombatState_Implementation()
 
 void AItem_Base::Multicast_SetCombatState_Implementation(bool bIsInCombat)
 {
+    bInCombat = bIsInCombat;
     UAnimMontage* Montage;
     if (bIsInCombat)
     {
@@ -135,6 +136,7 @@ void AItem_Base::OnEquip()
 
 void AItem_Base::Server_OnEquip_Implementation()
 {
+    SetOwner(GetAttachParentActor());
     Server_OnEquipDelegate.Broadcast();
 
     Client_OnEquip();

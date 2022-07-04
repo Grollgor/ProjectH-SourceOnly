@@ -41,7 +41,7 @@ public:
 
     UFUNCTION(Server, Reliable)
     void Server_SetCombatState();
-    UFUNCTION(NetMulticast, Unreliable)
+    UFUNCTION(NetMulticast, Reliable)
     void Multicast_SetCombatState(bool bIsInCombat);
 
     // NOTE(philipp): Base events

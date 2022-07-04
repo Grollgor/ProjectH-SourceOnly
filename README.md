@@ -1,2 +1,2 @@
 # ProjectH-SourceOnly
-This repository only contains the source code written for this project, because of assets/plugins that I can't upload here or easily remove. 
+This repository only contains the source code and a extremely basic project, and partially doesn't work because of missing assets that I can't upload here.
